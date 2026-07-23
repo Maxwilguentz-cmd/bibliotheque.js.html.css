@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diksyonè Devlopman Web (HTML, CSS, JS)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tèt Paj la -->
+  <header>
+    <h1>Diksyonè Dev Web 📚</h1>
+    <p>Aprann HTML, CSS ak JS ak eksplikasyon ultra senp ak ti chema!</p>
+    
+    <!-- Meni Prensipal pou Chanje Langaj -->
+    <nav class="language-tabs">
+      <button class="tab-btn active" onclick="switchTab('html')">HTML</button>
+      <button class="tab-btn" onclick="switchTab('css')">CSS</button>
+      <button class="tab-btn" onclick="switchTab('js')">JavaScript</button>
+    </nav>
+
+    <!-- Ba Rechèch ki adapte ak sekisyon an -->
+    <div class="search-container">
+      <input type="text" id="searchInput" onkeyup="searchDictionary()" placeholder="Chèche nan sekisyon HTML la...">
+    </div>
+  </header>
+
+  <!-- Kontni Prensipal -->
+  <main>
+    <!-- Sekisyon Sous-kategori -->
+    <div id="subCategories" class="sub-categories">
+      <!-- Meni kategori dinamik ap monte isit la pa JS -->
+    </div>
+
+    <!-- Kat elèman yo -->
+    <div id="dictionaryGrid" class="dictionary-grid">
+      <!-- Kat yo ap parèt dinamikman isit la -->
+    </div>
+  </main>
+
+  <!-- Modal pou wè detay ak ti chema -->
+  <div id="detailModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div class="analogy-box" id="modalAnalogy"></div>
+      
+      <h3>🎨 Ti Chema Vizyèl:</h3>
+      <div id="modalSchema" class="schema-box"></div>
+
+      <h3>💻 Egzanp Kòd:</h3>
+      <pre><code id="modalCode"></code></pre>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
